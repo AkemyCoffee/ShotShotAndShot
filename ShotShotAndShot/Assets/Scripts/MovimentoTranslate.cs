@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovimentoTranslate : MonoBehaviour
 {
+    [SerializeField]
     public float velocidade = 5f;
     float movimentoX = 0;
     Animator anim;
     bool Andando;
+    public bool Interagir = false;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -25,6 +28,7 @@ public class MovimentoTranslate : MonoBehaviour
         }
         transform.Translate(Vector2.right * movimentoX * velocidade * Time.deltaTime);
     }
+#region Movimento e Interagir
     public void Esquerda(){
         Vector3 scale = transform.localScale;
         movimentoX = -1;
@@ -39,5 +43,23 @@ public class MovimentoTranslate : MonoBehaviour
     }
     public void Parar(){
         movimentoX = 0;
+    }
+     public void BotaoInteragir(){
+        if (Interagir){
+            SceneManager.LoadScene(1);
+        }
+    }
+    #endregion
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Desafio")){
+            Interagir = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Desafio")){
+            Interagir = false;
+        }
     }
 }
