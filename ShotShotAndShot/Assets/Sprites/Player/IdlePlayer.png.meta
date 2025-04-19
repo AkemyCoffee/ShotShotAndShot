@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Personagem-Sheet_0
+      name: IdlePlayer_0
       rect:
         serializedVersion: 2
         x: 8
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4eefbe20e721dca4e86f9e9332328483
-      internalID: 216773471
+      spriteID: 1902d042e16d7634793a6dca75dfd40e
+      internalID: -369907097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personagem-Sheet_1
+      name: IdlePlayer_1
       rect:
         serializedVersion: 2
         x: 72
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1cd7bc5aa44c964aaef8425f56aba66
-      internalID: -836983588
+      spriteID: 0b50139bc3d5c9c49b1a62e856d5bfed
+      internalID: 1343477060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personagem-Sheet_2
+      name: IdlePlayer_2
       rect:
         serializedVersion: 2
         x: 136
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c16216067046a9f479bd7a27456d0190
-      internalID: -1283502772
+      spriteID: 6d5a43cddaba7304d9d3697bb6ef7667
+      internalID: -1601546455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personagem-Sheet_3
+      name: IdlePlayer_3
       rect:
         serializedVersion: 2
         x: 200
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3010d850fe6b8204899349fb24e9c9fe
-      internalID: 1027415858
+      spriteID: 20cea84d469ab0c41b0c3f3cc4c1ce50
+      internalID: 551495207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personagem-Sheet_4
+      name: IdlePlayer_4
       rect:
         serializedVersion: 2
         x: 264
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d290b9265e8e3443b71f3cdb370dfc2
-      internalID: -1137520742
+      spriteID: 3eb97eb72036ed6449f7bebbe835a75a
+      internalID: 505416799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personagem-Sheet_5
+      name: IdlePlayer_5
       rect:
         serializedVersion: 2
         x: 328
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3a85bc26a809b44b8fe9b75a62a7dfe
-      internalID: 1241859762
+      spriteID: 8c981e4fb88d1b64c830ebf747b818a9
+      internalID: -836694213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personagem-Sheet_6
+      name: IdlePlayer_6
       rect:
         serializedVersion: 2
         x: 392
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46f12d8ddd0489843be2e16dea44fefc
-      internalID: 866964704
+      spriteID: d19703b3feb4f2d49a256ed8435968d9
+      internalID: 1315970303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personagem-Sheet_7
+      name: IdlePlayer_7
       rect:
         serializedVersion: 2
         x: 456
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f28331bff3c08c4584531d3f8e97644
-      internalID: 1367452481
+      spriteID: e10b51517debb494b902e4c21b6acec7
+      internalID: 975209727
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Personagem-Sheet_0: 216773471
-      Personagem-Sheet_1: -836983588
-      Personagem-Sheet_2: -1283502772
-      Personagem-Sheet_3: 1027415858
-      Personagem-Sheet_4: -1137520742
-      Personagem-Sheet_5: 1241859762
-      Personagem-Sheet_6: 866964704
-      Personagem-Sheet_7: 1367452481
+      IdlePlayer_0: -369907097
+      IdlePlayer_1: 1343477060
+      IdlePlayer_2: -1601546455
+      IdlePlayer_3: 551495207
+      IdlePlayer_4: 505416799
+      IdlePlayer_5: -836694213
+      IdlePlayer_6: 1315970303
+      IdlePlayer_7: 975209727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

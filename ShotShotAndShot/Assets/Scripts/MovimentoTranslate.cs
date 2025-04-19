@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class MovimentoTranslate : MonoBehaviour
 {
-    public float velocidade = 10f;
+    public float velocidade = 5f;
     float movimentoX = 0;
+    Animator anim;
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     void Update()
     {
+        if (movimentoX != 0){
+            //anim.SetBool("Andando", Andando);
+        }
+        //anim.SetBool("Parada", Parada);
         transform.Translate(Vector2.right * movimentoX * velocidade * Time.deltaTime);
     }
     public void Esquerda(){
