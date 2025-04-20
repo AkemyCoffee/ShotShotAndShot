@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Balaos : MonoBehaviour
 {
-    public GameObject[] baloes;
-    public float CimaVel = 0.05f;
+    public float CimaVel;
+    bool acertou = false;
     Animator anim;
     void Start()
     {
@@ -13,38 +13,33 @@ public class Balaos : MonoBehaviour
     }
     void Update()
     {
-        QualBalao();
+        if (acertou){
+            anim.SetBool("Acertou", acertou);
+            GetComponent<Collider2D>().enabled= false;
+        }
+        else{
+            anim.SetBool("Acertou", acertou);
+            GetComponent<Collider2D>().enabled= true;
+        }
     }
     private void OnMouseDown()
     {
-        anim.SetTrigger("Pocou");
-
+        acertou = true;
         StartCoroutine(Espere(1));
-        
     }
-    private void FixedUpdate()
-    {
+    private void FixedUpdate(){
         transform.Translate(0, CimaVel, 0);
     }
     private void ResetarPosicao(){
         float randomX = Random.Range(-9.4f, 9.4f);
-        transform.position = new Vector2(randomX, -8f);
-
-    }
-    void QualBalao(){
-        int RandomBalao = Random.Range(0, baloes.Length);
-        
+        transform.position = new Vector2(randomX, -10f);
     }
     IEnumerator Espere(int segundos){
-
         CimaVel = 0;
         yield return new WaitForSeconds(segundos);
-        anim.ResetTrigger("Pocou");
-
+        acertou = false;
         ResetarPosicao();
-
-        CimaVel = 0.05f;
-
+        CimaVel = Random.Range(0.05f, 0.15f);
     }
     
 }
