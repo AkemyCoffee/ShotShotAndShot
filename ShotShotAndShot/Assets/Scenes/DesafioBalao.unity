@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BalaoAmarelo
       objectReference: {fileID: 0}
+    - target: {fileID: 6953117535083071219, guid: a4e353aeae5d6664dbda0926d9c5617f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7248415187050799878, guid: a4e353aeae5d6664dbda0926d9c5617f, type: 3}
       propertyPath: CP
       value: 
@@ -799,6 +803,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bad431510311f664589734666be61f5c, type: 2}
+    - target: {fileID: 2307867209506177951, guid: 206d27cd74a1aaa4583779f288ca16ef, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5346614040878390559, guid: 206d27cd74a1aaa4583779f288ca16ef, type: 3}
       propertyPath: m_Name
       value: BalaoVermelho

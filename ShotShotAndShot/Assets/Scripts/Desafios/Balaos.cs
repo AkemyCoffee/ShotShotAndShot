@@ -7,9 +7,11 @@ public class Balaos : MonoBehaviour
     public float CimaVel;
     bool acertou = false;
     Animator anim;
+    AudioSource AS;
     void Start()
     {
         anim = GetComponent<Animator>();
+        AS = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -24,6 +26,7 @@ public class Balaos : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        AS.Play();
         acertou = true;
         StartCoroutine(Espere(1));
     }
