@@ -10,6 +10,7 @@ public class MovimentoTranslate : MonoBehaviour
     public float velocidade = 5f;
     float movimentoX = 0;
     Animator anim;
+    
     bool Andando;
     public bool Interagir = false;
     void Start()
@@ -34,12 +35,14 @@ public class MovimentoTranslate : MonoBehaviour
         movimentoX = -1;
         scale.x = -1;
         transform.localScale = scale;
+        
     }
     public void Direita(){
         Vector3 scale = transform.localScale;
         movimentoX = 1;
         scale.x = 1;
         transform.localScale = scale;
+        
     }
     public void Parar(){
         movimentoX = 0;

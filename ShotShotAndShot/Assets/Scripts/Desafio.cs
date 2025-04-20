@@ -9,12 +9,7 @@ public class Desafio : MonoBehaviour
     public GameObject Distintivo;
     void Start()
     {
-        //MT = GetComponent<MovimentoTranslate>();
         MT = GameObject.Find("Player").GetComponent<MovimentoTranslate>();
-    }
-    void Update()
-    {
-       
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
