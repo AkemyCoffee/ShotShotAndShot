@@ -12,10 +12,12 @@ public class ControlePontuação : MonoBehaviour
         score++;
         pontuacao.text= score.ToString();
     }
-    void Update()
+    void Start()
     {
-        StartCoroutine(Temporizador(300));
+        StartCoroutine(Temporizador(180));
+        
     }
+  
     IEnumerator Temporizador(float duracao){
         float TempoRestante = duracao;
 
