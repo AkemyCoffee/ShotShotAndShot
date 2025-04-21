@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DesafioBalao.unity
     guid: 9b7bcd8770fb79c4891abc0363ee038b
+  - enabled: 1
+    path: Assets/Scenes/DesafioAcerteAlvo.unity
+    guid: 6bf375870b3df364c8caab9d9cf238ab
   m_configObjects: {}

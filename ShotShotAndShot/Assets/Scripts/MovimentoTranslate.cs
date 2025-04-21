@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,7 @@ public class MovimentoTranslate : MonoBehaviour
     
     bool Andando;
     public bool Interagir = false;
+    bool Interagir2 = false;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -50,6 +52,8 @@ public class MovimentoTranslate : MonoBehaviour
      public void BotaoInteragir(){
         if (Interagir){
             SceneManager.LoadScene(1);
+        }if (Interagir2){
+            SceneManager.LoadScene(2);
         }
     }
     #endregion
@@ -58,11 +62,17 @@ public class MovimentoTranslate : MonoBehaviour
         if (collision.CompareTag("Desafio")){
             Interagir = true;
         }
+        if (collision.gameObject.name== "Desafio1 (1)"){
+            Interagir2 = true;
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Desafio")){
             Interagir = false;
+        }
+        if (collision.gameObject.name== "Desafio1"){
+            Interagir2 = false;
         }
     }
 }
