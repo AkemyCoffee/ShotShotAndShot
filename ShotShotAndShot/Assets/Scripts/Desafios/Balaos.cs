@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Balaos : MonoBehaviour
 {
+    public TextMeshProUGUI acabou;
     public float CimaVel;
     bool acertou = false;
+    bool Passou = false;
     Animator anim;
     AudioSource AS;
     void Start()
@@ -23,6 +27,7 @@ public class Balaos : MonoBehaviour
             anim.SetBool("Acertou", acertou);
             GetComponent<Collider2D>().enabled= true;
         }
+        PassouTela();
     }
     private void OnMouseDown()
     {
@@ -44,5 +49,9 @@ public class Balaos : MonoBehaviour
         ResetarPosicao();
         CimaVel = Random.Range(0.05f, 0.15f);
     }
-    
+    public void PassouTela(){
+        if(transform.position.y> 5){
+            acabou.enabled = true;
+        }
+    }
 }
