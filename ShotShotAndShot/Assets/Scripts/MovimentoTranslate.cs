@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MovimentoTranslate : MonoBehaviour
 {
     [SerializeField]
+
+    //Movimento e Interação Personagem
     public float velocidade = 5f;
     float movimentoX = 0;
     Animator anim;
-    
     bool Andando;
     public bool Interagir = false;
     bool Interagir2 = false;
+
+    //Botões
+    public Sprite spr1, spr2;
+    public Button botao;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -55,24 +60,29 @@ public class MovimentoTranslate : MonoBehaviour
         }if (Interagir2){
             SceneManager.LoadScene(2);
         }
+        
     }
     #endregion
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Desafio")){
             Interagir = true;
+            botao.image.sprite = spr2;
         }
-        if (collision.gameObject.name== "Desafio1 (1)"){
+        if (collision.CompareTag("Desafio1")){
             Interagir2 = true;
+            botao.image.sprite = spr2;
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Desafio")){
             Interagir = false;
+            botao.image.sprite = spr1;
         }
-        if (collision.gameObject.name== "Desafio1"){
+        if (collision.CompareTag("Desafio1")){
             Interagir2 = false;
+            botao.image.sprite = spr1;
         }
     }
 }

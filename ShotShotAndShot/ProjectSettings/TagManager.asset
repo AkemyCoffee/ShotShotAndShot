@@ -8,6 +8,7 @@ TagManager:
   - Balao
   - Cima
   - Baixo
+  - Desafio1
   layers:
   - Default
   - TransparentFX
