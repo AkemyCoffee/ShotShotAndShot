@@ -52,6 +52,7 @@ public class Balaos : MonoBehaviour
     public void PassouTela(){
         if(transform.position.y> 5){
             acabou.enabled = true;
+            acabou.text = "O balão foi embora";
         }
     }
 }

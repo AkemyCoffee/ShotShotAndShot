@@ -27,7 +27,7 @@ public class ControlePontuação : MonoBehaviour
             yield return new WaitForSeconds(1f);
             TempoRestante--;
 
-        if (TempoRestante == 1)
+        if (TempoRestante == 0)
         {
             Debug.Log("ACABOU");
             acabou.enabled = true;
