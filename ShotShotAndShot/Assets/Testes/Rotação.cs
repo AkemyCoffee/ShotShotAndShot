@@ -7,7 +7,6 @@ public class Rotação : MonoBehaviour
     public float vel = 75f;
     private float anguloAtual = 0f;
     bool Girando = true;
-   
     void Update()
     {
         float rotacao = vel * Time.deltaTime;
