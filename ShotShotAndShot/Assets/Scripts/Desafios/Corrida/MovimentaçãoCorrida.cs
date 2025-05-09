@@ -4,21 +4,38 @@ using UnityEngine;
 
 public class MovimentaçãoCorrida : MonoBehaviour
 {
-    public float vel = 5;
-    float movimentoX = 0;
+    public float vel = 1;
+    public float movimentoX = 0;
     void Start()
     {
         
     }
     void Update()
     {
-        transform.Translate(Vector2.right * movimentoX * vel * Time.deltaTime);
+        switch(movimentoX){
+            case -1:
+                transform.position = new Vector2(-6, transform.position.y);
+            break;
+            case 0:
+                transform.position = new Vector2(0, transform.position.y);
+            break;
+            case 1:
+                transform.position = new Vector2(6, transform.position.y);
+            break;
+        }
+
+        if (movimentoX > 1){
+            movimentoX = 1;
+        }
+        if (movimentoX < -1){
+            movimentoX = -1;
+        }
     }
     public void Esquerda(){
-        movimentoX = -1;
+        movimentoX--;
     }
     public void Direita(){
-        movimentoX = 1;
+        movimentoX++;
     }
     public void Parar(){
         movimentoX = 0;

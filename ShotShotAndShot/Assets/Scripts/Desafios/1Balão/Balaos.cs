@@ -9,7 +9,6 @@ public class Balaos : MonoBehaviour
     public TextMeshProUGUI acabou;
     public float CimaVel;
     bool acertou = false;
-    bool Passou = false;
     Animator anim;
     AudioSource AS;
     void Start()
