@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class Obstáculos : MonoBehaviour
 {
     public float VelBaixo = 0.1f;
-    float randomX, crescendo = 1f;
-    public float andandinho = 0.2f;
-    public GameObject[] obtaculos;
+    public float randomX, crescendo = 1f;
+    public GameObject OutroObstaculo;
+    public GameObject[] SpritesObtaculos;
     void Update()
     {
+        StartCoroutine(Espere(2));
         Vector3 crescer = Vector3.one * crescendo* Time.deltaTime;
         if(transform.position.y< -8){   
             ResetarPosicao();
@@ -35,8 +37,13 @@ public class Obstáculos : MonoBehaviour
         transform.Translate(0, -VelBaixo, 0);
     }
     private void ResetarPosicao(){
-        randomX = Random.Range(1,3);
+        randomX = Random.Range(0,3);
         transform.position = new Vector2(randomX, 8f);
         transform.localScale = Vector3.one;
+    }
+    IEnumerator Espere(int segundos){
+        yield return new WaitForSeconds(segundos);
+        OutroObstaculo.SetActive(true);
+
     }
 }
