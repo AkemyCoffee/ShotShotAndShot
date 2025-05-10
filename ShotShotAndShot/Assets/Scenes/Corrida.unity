@@ -328,7 +328,6 @@ MonoBehaviour:
   VelBaixo: 0.12
   randomX: 0
   crescendo: 1
-  OutroObstaculo: {fileID: 2045527561}
   SprObs:
   - {fileID: -1465048039, guid: 557f5088cd4113741a660c32ad1a66bb, type: 3}
   - {fileID: -1143649102, guid: 807b3ae5bfe6e57419a9f7a5691dfc3b, type: 3}
@@ -962,12 +961,12 @@ GameObject:
   - component: {fileID: 2045527563}
   - component: {fileID: 2045527562}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Obstaculo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &2045527562
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1028,7 +1027,6 @@ MonoBehaviour:
   VelBaixo: 0.12
   randomX: 0
   crescendo: 1
-  OutroObstaculo: {fileID: 0}
   SprObs:
   - {fileID: -1465048039, guid: 557f5088cd4113741a660c32ad1a66bb, type: 3}
   - {fileID: -1143649102, guid: 807b3ae5bfe6e57419a9f7a5691dfc3b, type: 3}
