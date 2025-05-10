@@ -11,7 +11,7 @@ public class ControlePontuação : MonoBehaviour
     int score = 0;
     void Start()
     {
-        StartCoroutine(Temporizador(180));
+        StartCoroutine(Temporizador(60));
         acabou.enabled = false;
     }
     public void AdicionarPonto(){
