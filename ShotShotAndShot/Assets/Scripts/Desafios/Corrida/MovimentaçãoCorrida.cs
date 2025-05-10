@@ -37,7 +37,4 @@ public class MovimentaçãoCorrida : MonoBehaviour
     public void Direita(){
         movimentoX++;
     }
-    public void Parar(){
-        movimentoX = 0;
-    }
 }
