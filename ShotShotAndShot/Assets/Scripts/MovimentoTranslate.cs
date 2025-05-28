@@ -17,6 +17,8 @@ public class MovimentoTranslate : MonoBehaviour
     public bool Interagir = false;
     bool Interagir2 = false;
 
+    Vector3 scale;
+
     //Botões
     public Sprite spr1, spr2;
     public Button botao;
@@ -38,14 +40,14 @@ public class MovimentoTranslate : MonoBehaviour
     }
 #region Movimento e Interagir
     public void Esquerda(){
-        Vector3 scale = transform.localScale;
+        scale = transform.localScale;
         movimentoX = -1;
         scale.x = -1;
         transform.localScale = scale;
         
     }
     public void Direita(){
-        Vector3 scale = transform.localScale;
+        scale = transform.localScale;
         movimentoX = 1;
         scale.x = 1;
         transform.localScale = scale;
@@ -54,7 +56,7 @@ public class MovimentoTranslate : MonoBehaviour
     public void Parar(){
         movimentoX = 0;
     }
-     public void BotaoInteragir(){
+    public void BotaoInteragir(){
         if (Interagir){
             SceneManager.LoadScene(1);
         }if (Interagir2){
