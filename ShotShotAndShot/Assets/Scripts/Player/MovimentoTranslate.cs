@@ -15,7 +15,7 @@ public class MovimentoTranslate : MonoBehaviour
     Animator anim;
     bool Andando;
     public bool Interagir = false;
-    bool Interagir2 = false;
+    bool Desafio1, Desafio2;
 
     Vector3 scale;
 
@@ -57,22 +57,25 @@ public class MovimentoTranslate : MonoBehaviour
         movimentoX = 0;
     }
     public void BotaoInteragir(){
-        if (Interagir){
+        if (Interagir && Desafio1){
             SceneManager.LoadScene(1);
-        }if (Interagir2){
+        }
+        if (Interagir && Desafio2)
+        {
             SceneManager.LoadScene(2);
         }
-        
     }
     #endregion
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Desafio")){
             Interagir = true;
+            Desafio1 = true;
             botao.image.sprite = spr2;
         }
         if (collision.CompareTag("Desafio1")){
-            Interagir2 = true;
+            Interagir = true;
+            Desafio2 = true;
             botao.image.sprite = spr2;
         }
     }
@@ -80,10 +83,12 @@ public class MovimentoTranslate : MonoBehaviour
     {
         if (collision.CompareTag("Desafio")){
             Interagir = false;
+            Desafio1 = false;
             botao.image.sprite = spr1;
         }
         if (collision.CompareTag("Desafio1")){
-            Interagir2 = false;
+            Interagir = false;
+            Desafio2 = false;
             botao.image.sprite = spr1;
         }
     }
