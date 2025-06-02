@@ -60,8 +60,7 @@ public class MovimentoTranslate : MonoBehaviour
         if (Interagir && Desafio1){
             SceneManager.LoadScene(1);
         }
-        if (Interagir && Desafio2)
-        {
+        if (Interagir && Desafio2){
             SceneManager.LoadScene(2);
         }
     }

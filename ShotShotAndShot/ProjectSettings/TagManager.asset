@@ -10,6 +10,7 @@ TagManager:
   - Baixo
   - Desafio1
   - Mira
+  - NPC
   layers:
   - Default
   - TransparentFX
