@@ -1,17 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogoScript : MonoBehaviour
 {
-    public Text Nome;
-    public Text Dialogo;
-    public Image PersonagemImagem;
+    public Image PersonagemEsquerda;
+    public Image PersonagemDireita;
+    public TextMeshProUGUI Nome;
+    public TextMeshProUGUI Dialogo;
     public GameObject PainelDialogo;
 
-    public FalasDialogo[] linhas;
+
+    public FalasDialogo[] Falas;
     private int IndexAtual = 0;
 
     void Start()
@@ -26,28 +29,52 @@ public class DialogoScript : MonoBehaviour
             ProximaLinha();
         }
     }
+
+    public void MostreLinhas()
+    {
+        PainelDialogo.SetActive(true);
+        FalasDialogo linha = Falas[IndexAtual];
+
+
+        Nome.text = Falas[IndexAtual].PersonagemNome;
+        Dialogo.text = linha.Falas;
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<MovimentoTranslate>().velocidade = 0;
+
+
+        if (linha.portraitEsquerda != null)
+        {
+            PersonagemEsquerda.sprite = linha.portraitEsquerda;
+        }
+        if (linha.portraitDireita != null)
+        {
+            PersonagemDireita.sprite = linha.portraitDireita;
+        }
+
+        if (linha.PrincipalFala)
+        {
+            PersonagemEsquerda.color = Color.white;
+            PersonagemDireita.color = new Color(1, 1, 1, 0.5f);
+        }
+        else
+        {
+            PersonagemDireita.color = Color.white;
+            PersonagemEsquerda.color = new Color(1, 1, 1, 0.5f);
+        }
+
+    }
     public void ProximaLinha()
     {
         IndexAtual++;
 
-        if (IndexAtual < linhas.Length)
+        if (IndexAtual < Falas.Length)
         {
             MostreLinhas();
         }
         else
         {
             PainelDialogo.SetActive(false);
-        }
-    }
-    public void MostreLinhas()
-    {
-        PainelDialogo.SetActive(true);
-        Nome.text = linhas[IndexAtual].PersonagemNome;
-        Dialogo.text = linhas[IndexAtual].Falas;
-
-        if (linhas[IndexAtual].portrait != null)
-        {
-            PersonagemImagem.sprite = linhas[IndexAtual].portrait;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<MovimentoTranslate>().velocidade = 5;
         }
     }
 }
